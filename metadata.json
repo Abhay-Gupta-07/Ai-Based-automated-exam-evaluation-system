@@ -1,0 +1,6 @@
+{
+  "name": "AI-Based Automated Exam Evaluation System",
+  "description": "An intelligent exam evaluation platform leveraging Gemini AI, OCR text extraction, rubric semantic matching, plagiarism scoring, and comprehensive multi-role analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
