@@ -159,21 +159,21 @@ export const TakeExamModal: React.FC<Props> = ({
         fileType: 'text',
       });
 
-      // 3. Trigger AI Evaluation Pipeline
-      setEvaluationStage('Running Gemini AI multi-modal vision and semantic evaluation pipeline...');
+      // 3. Trigger Evaluation Pipeline
+      setEvaluationStage('Running multi-modal vision and semantic evaluation pipeline...');
       await new Promise((r) => setTimeout(r, 800));
 
       setEvaluationStage('Analyzing semantic similarity, keyword matching, and concept gaps...');
       await new Promise((r) => setTimeout(r, 900));
 
-      setEvaluationStage('Calculating marks and generating AI feedback scorecard...');
+      setEvaluationStage('Calculating marks and generating evaluation feedback scorecard...');
       const result = await api.triggerEvaluation(sub.id);
 
       setEvalResult(result);
       onComplete(result);
     } catch (err) {
       console.error('Failed submitting exam:', err);
-      alert('An error occurred during AI evaluation submission. Please try again.');
+      alert('An error occurred during evaluation submission. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -228,11 +228,11 @@ export const TakeExamModal: React.FC<Props> = ({
             </div>
             <div className="space-y-2 max-w-md mx-auto">
               <h3 className="text-lg font-black text-slate-900">
-                Automated AI Examination Engine
+                Automated Examination Engine
               </h3>
               <p className="text-xs text-indigo-600 font-semibold animate-pulse">{evaluationStage}</p>
               <p className="text-[11px] text-slate-500">
-                Evaluating responses using Gemini AI semantic matching, key concept verification, and automated rubric scoring.
+                Evaluating responses using semantic matching, key concept verification, and automated rubric scoring.
               </p>
             </div>
           </div>
@@ -244,14 +244,14 @@ export const TakeExamModal: React.FC<Props> = ({
                 <Award className="w-6 h-6" />
               </div>
               <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-700">
-                AI Evaluation Complete
+                Automated Evaluation Complete
               </span>
               <h3 className="text-2xl font-black text-slate-900">
                 Score: {evalResult.totalObtainedMarks} / {evalResult.totalMarks} Marks ({evalResult.overallPercentage}%)
               </h3>
               <div className="flex justify-center items-center space-x-3 text-xs font-semibold text-slate-600">
                 <span className="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full border border-emerald-300">
-                  {evalResult.overallConfidenceScore}% AI Confidence Score
+                  {evalResult.overallConfidenceScore}% Confidence Score
                 </span>
                 <span className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full border border-indigo-300">
                   {evalResult.overallPlagiarismScore}% Originality Index
@@ -261,7 +261,7 @@ export const TakeExamModal: React.FC<Props> = ({
 
             {/* Question Breakdown */}
             <div className="space-y-4">
-              <h4 className="font-bold text-slate-900 text-sm">Question Wise AI Feedback</h4>
+              <h4 className="font-bold text-slate-900 text-sm">Question Wise Evaluation Feedback</h4>
               {evalResult.questionEvaluations.map((q) => (
                 <div
                   key={q.questionId}

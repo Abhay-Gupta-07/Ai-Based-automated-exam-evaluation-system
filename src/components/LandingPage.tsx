@@ -45,7 +45,6 @@ export const LandingPage: React.FC<Props> = ({ onOpenPortalLogin, onOpenDocs }) 
           {/* Center Links */}
           <nav className="hidden md:flex items-center space-x-8 text-xs font-bold text-slate-700">
             <a href="#features" className="hover:text-indigo-600 transition">Platform Features</a>
-            <a href="#ai-engine" className="hover:text-indigo-600 transition">AI Gemini Engine</a>
             <a href="#portals" className="hover:text-indigo-600 transition">Academic Portals</a>
             <button onClick={onOpenDocs} className="hover:text-indigo-600 transition flex items-center gap-1.5">
               <BookOpen className="w-4 h-4 text-indigo-600" />
@@ -69,16 +68,16 @@ export const LandingPage: React.FC<Props> = ({ onOpenPortalLogin, onOpenDocs }) 
       {/* 2. Hero Section */}
       <section className="relative pt-16 pb-20 px-4 sm:px-8 max-w-7xl mx-auto text-center z-10 flex flex-col items-center">
         <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full liquid-glass-pill text-indigo-700 text-xs font-extrabold mb-6 shadow-sm border border-indigo-200/60">
-          <Sparkles className="w-4 h-4 text-indigo-600" />
-          <span>Powered by Gemini AI Evaluation Model & Automated Rubrics</span>
+          <Zap className="w-4 h-4 text-indigo-600" />
+          <span>Automated Examination Evaluation Model & Standardized Rubrics</span>
         </div>
 
         <h1 className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-[1.15] max-w-4xl">
-          Automated Examination & <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600">AI Evaluation Platform</span>
+          Automated Examination & <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600">Digital Evaluation Platform</span>
         </h1>
 
         <p className="mt-6 text-base sm:text-lg text-slate-600 font-medium max-w-2xl leading-relaxed">
-          Transform university answer sheet grading with instant AI rubric scoring, anti-plagiarism verification, transparent feedback, and complete multi-portal governance.
+          Transform university answer sheet grading with instant rubric scoring, anti-plagiarism verification, transparent feedback, and complete multi-portal governance.
         </p>
 
         {/* Hero CTA Buttons */}
@@ -107,11 +106,11 @@ export const LandingPage: React.FC<Props> = ({ onOpenPortalLogin, onOpenDocs }) 
             <div className="flex items-center space-x-3">
               <div className="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></div>
               <span className="text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
-                Live AI Evaluation Engine Demo
+                Live Evaluation Engine Demo
               </span>
             </div>
             <span className="px-3 py-1 bg-indigo-100/80 text-indigo-800 border border-indigo-200 rounded-lg text-[11px] font-mono font-extrabold">
-              Gemini AI • Confidence: 98.4%
+              Confidence: 98.4%
             </span>
           </div>
 
@@ -127,10 +126,10 @@ export const LandingPage: React.FC<Props> = ({ onOpenPortalLogin, onOpenDocs }) 
               </p>
             </div>
 
-            {/* AI Rubric Feedback */}
+            {/* Rubric Feedback */}
             <div className="space-y-3 bg-indigo-50/80 p-4 rounded-2xl border border-indigo-100 shadow-sm">
               <div className="flex justify-between text-xs font-bold text-indigo-900">
-                <span>AI Rubric Evaluation</span>
+                <span>Standardized Rubric Evaluation</span>
                 <span className="text-emerald-600 font-black text-sm">Score: 9.5 / 10</span>
               </div>
               <div className="space-y-2 text-xs text-slate-700">
@@ -215,14 +214,14 @@ export const LandingPage: React.FC<Props> = ({ onOpenPortalLogin, onOpenDocs }) 
                     Faculty Evaluator Portal
                   </h3>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed font-medium">
-                    Create exam question papers, set evaluation rubrics, upload student answer sheets, and review Gemini AI automated grading.
+                    Create exam question papers, set evaluation rubrics, upload student answer sheets, and review automated grading.
                   </p>
                 </div>
 
                 <ul className="space-y-2 text-xs font-semibold text-slate-700">
                   <li className="flex items-center space-x-2">
                     <CheckCircle2 className="w-3.5 h-3.5 text-cyan-500 shrink-0" />
-                    <span>Automated AI Script Grading</span>
+                    <span>Automated Script Grading</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle2 className="w-3.5 h-3.5 text-cyan-500 shrink-0" />
@@ -255,7 +254,7 @@ export const LandingPage: React.FC<Props> = ({ onOpenPortalLogin, onOpenDocs }) 
                     Student Exam Portal
                   </h3>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed font-medium">
-                    Submit exam answers online, request account creation, view detailed AI scorecards, and review question-by-question feedback.
+                    Submit exam answers online, request account creation, view detailed scorecards, and review question-by-question feedback.
                   </p>
                 </div>
 
@@ -266,7 +265,7 @@ export const LandingPage: React.FC<Props> = ({ onOpenPortalLogin, onOpenDocs }) 
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                    <span>Transparent AI Scorecards</span>
+                    <span>Transparent Scorecards</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
@@ -303,9 +302,9 @@ export const LandingPage: React.FC<Props> = ({ onOpenPortalLogin, onOpenDocs }) 
             <div className="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold">
               <Cpu className="w-5 h-5" />
             </div>
-            <h3 className="font-extrabold text-slate-900 text-base">Gemini Rubric Scoring</h3>
+            <h3 className="font-extrabold text-slate-900 text-base">Standardized Rubric Scoring</h3>
             <p className="text-xs text-slate-600 font-medium leading-relaxed">
-              Leverages AI to grade complex subjective answer scripts line-by-line according to custom faculty rubrics with strict accuracy.
+              Leverages automated evaluation algorithms to grade complex subjective answer scripts line-by-line according to custom faculty rubrics with strict accuracy.
             </p>
           </div>
 

@@ -593,7 +593,7 @@ export const PortalLogin: React.FC<Props> = ({ onLoginSuccess, onBackToLanding, 
 
       {/* Footer */}
       <footer className="p-6 text-center text-xs text-slate-600 font-medium border-t border-white/80 bg-white/60 backdrop-blur-md">
-        AIEval Pro University Portal System • Powered by Gemini AI Evaluation Engine
+        AutoEval Pro University Portal System • Automated Examination Evaluation Engine
       </footer>
     </div>
   );

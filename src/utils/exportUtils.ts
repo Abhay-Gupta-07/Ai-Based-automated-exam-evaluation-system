@@ -59,8 +59,8 @@ export const printOrSaveReportHTML = (title: string, htmlBody: string) => {
         </div>
         ${htmlBody}
         <div class="footer">
-          <span>AI-Based Automated Exam Evaluation System • Official University Academic Record</span>
-          <span>Verified by Gemini AI Engine • ${new Date().toLocaleDateString()}</span>
+          <span>Automated Exam Evaluation System • Official University Academic Record</span>
+          <span>Verified by Automated Evaluation System Engine • ${new Date().toLocaleDateString()}</span>
         </div>
       </body>
     </html>
@@ -88,7 +88,7 @@ export const generateStudentReportHTML = (evalResult: EvaluationResult) => {
   return `
     <div class="header">
       <div>
-        <div class="brand">AI Exam Evaluation Report</div>
+        <div class="brand">Exam Evaluation Report</div>
         <div style="font-size: 16px; font-weight: 600; margin-top: 4px;">${evalResult.examTitle}</div>
       </div>
       <div class="meta">
@@ -106,12 +106,12 @@ export const generateStudentReportHTML = (evalResult: EvaluationResult) => {
         </div>
         <div style="text-align: right;">
           <span class="badge">Overall Grade: ${evalResult.overallPercentage}%</span>
-          <div style="font-size: 13px; color: #64748b; margin-top: 6px;">AI Confidence: ${evalResult.overallConfidenceScore}%</div>
+          <div style="font-size: 13px; color: #64748b; margin-top: 6px;">Evaluation Confidence: ${evalResult.overallConfidenceScore}%</div>
         </div>
       </div>
     </div>
 
-    <h3>Question-wise AI Evaluation Breakdown</h3>
+    <h3>Question-wise Evaluation Breakdown</h3>
     <table>
       <thead>
         <tr>
@@ -121,7 +121,7 @@ export const generateStudentReportHTML = (evalResult: EvaluationResult) => {
           <th>Keyword Score</th>
           <th>Grammar Score</th>
           <th>Confidence</th>
-          <th>AI Feedback</th>
+          <th>Feedback</th>
         </tr>
       </thead>
       <tbody>

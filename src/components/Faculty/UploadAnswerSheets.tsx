@@ -66,7 +66,7 @@ export const UploadAnswerSheets: React.FC<Props> = ({ exams = [], students = [],
     const steps = [
       'Step 1/8: Cleaning extracted OCR text & removing noise...',
       'Step 2/8: Tokenizing keyphrases & stemming concepts...',
-      'Step 3/8: Generating Gemini 3.6 Flash semantic embeddings...',
+      'Step 3/8: Generating semantic concept embeddings...',
       'Step 4/8: Computing semantic similarity against Model Answer...',
       'Step 5/8: Matching rubric keywords & weighting criteria...',
       'Step 6/8: Analyzing grammar & concept gaps...',
@@ -100,7 +100,7 @@ export const UploadAnswerSheets: React.FC<Props> = ({ exams = [], students = [],
         ],
       });
 
-      // Trigger AI evaluation
+      // Trigger evaluation
       await api.triggerEvaluation(sub.id);
       onEvaluationCreated();
     } catch (e) {
@@ -129,12 +129,12 @@ export const UploadAnswerSheets: React.FC<Props> = ({ exams = [], students = [],
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 liquid-glass p-5 rounded-2xl">
         <div>
-          <h2 className="text-xl font-bold text-slate-900">Upload Answer Sheets & Trigger AI Evaluation</h2>
-          <p className="text-xs text-slate-500">Extract handwritten text via Gemini OCR, run 8-step semantic pipeline, and compute scores</p>
+          <h2 className="text-xl font-bold text-slate-900">Upload Answer Sheets & Trigger Automated Evaluation</h2>
+          <p className="text-xs text-slate-500">Extract handwritten text via Vision OCR, run 8-step semantic pipeline, and compute scores</p>
         </div>
         <div className="flex items-center space-x-2 text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-200/80">
-          <Sparkles className="w-4 h-4" />
-          <span>Gemini 3.6 Multi-Modal Vision</span>
+          <FileText className="w-4 h-4" />
+          <span>Advanced Multi-Modal Vision OCR</span>
         </div>
       </div>
 
@@ -223,7 +223,7 @@ export const UploadAnswerSheets: React.FC<Props> = ({ exams = [], students = [],
           </div>
         </div>
 
-        {/* Right: OCR Transcribed Text & AI Evaluation Trigger */}
+        {/* Right: OCR Transcribed Text & Evaluation Trigger */}
         <div className="liquid-glass rounded-2xl p-5 flex flex-col justify-between space-y-4">
           <div>
             <div className="flex items-center justify-between mb-3">
@@ -263,7 +263,7 @@ export const UploadAnswerSheets: React.FC<Props> = ({ exams = [], students = [],
               <div className="p-4 bg-blue-50 border border-blue-200 rounded-2xl space-y-2">
                 <div className="flex items-center space-x-2 font-bold text-xs text-blue-900">
                   <Loader2 className="w-4 h-4 animate-spin text-blue-600" />
-                  <span>Gemini AI Evaluation Pipeline Running...</span>
+                  <span>Evaluation Pipeline Running...</span>
                 </div>
                 <div className="w-full bg-blue-200 h-2 rounded-full overflow-hidden">
                   <div
@@ -280,8 +280,8 @@ export const UploadAnswerSheets: React.FC<Props> = ({ exams = [], students = [],
                 onClick={handleTriggerAIEvaluation}
                 className="w-full py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl font-bold text-sm shadow-lg shadow-blue-500/25 flex items-center justify-center space-x-2 transition"
               >
-                <Sparkles className="w-5 h-5" />
-                <span>Trigger AI Evaluation Pipeline</span>
+                <FileText className="w-5 h-5" />
+                <span>Trigger Automated Evaluation Pipeline</span>
               </button>
             )}
           </div>

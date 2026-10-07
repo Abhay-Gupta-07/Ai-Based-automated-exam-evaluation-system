@@ -32,7 +32,7 @@ export const StudentExamsView: React.FC<Props> = ({
             Active & Upcoming Examinations
           </h2>
           <p className="text-xs text-slate-500 mt-1">
-            Exams assigned for your course and semester. Click "Take Exam" to complete typed answer sheets for real-time Gemini AI evaluation.
+            Exams assigned for your course and semester. Click "Take Exam" to complete typed answer sheets for real-time automated evaluation.
           </p>
         </div>
         <span className="px-3 py-1 bg-emerald-50 text-emerald-700 font-extrabold text-xs rounded-xl border border-emerald-200 flex items-center space-x-1.5 whitespace-nowrap">

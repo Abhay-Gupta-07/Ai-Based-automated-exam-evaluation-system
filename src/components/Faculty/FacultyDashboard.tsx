@@ -25,9 +25,9 @@ export const FacultyDashboard: React.FC<Props> = ({ exams = [], submissions = []
           <span className="px-2.5 py-1 rounded-full text-[10px] font-extrabold bg-indigo-100/80 text-indigo-800 border border-indigo-200 uppercase tracking-wider">
             Faculty Evaluation Workspace
           </span>
-          <h2 className="text-2xl font-black mt-2 tracking-tight text-slate-900">Automated AI Exam Examiner</h2>
+          <h2 className="text-2xl font-black mt-2 tracking-tight text-slate-900">Automated Exam Examiner</h2>
           <p className="text-xs text-slate-600 mt-1 max-w-xl">
-            Create question papers, upload student answer sheets, run Gemini AI semantic evaluations, and review confidence scores.
+            Create question papers, upload student answer sheets, run semantic evaluations, and review confidence scores.
           </p>
         </div>
         <div className="mt-4 md:mt-0 flex space-x-3">
@@ -63,7 +63,7 @@ export const FacultyDashboard: React.FC<Props> = ({ exams = [], submissions = []
           <div className="mt-3 flex items-end justify-between">
             <span className="text-3xl font-black text-slate-900">{pendingSubmissions.length}</span>
             <span className="text-amber-800 text-xs font-bold bg-amber-100/80 px-2 py-1 rounded-md border border-amber-200/60">
-              Requires AI Run
+              Requires Evaluation
             </span>
           </div>
         </div>
@@ -103,7 +103,7 @@ export const FacultyDashboard: React.FC<Props> = ({ exams = [], submissions = []
             <ArrowRight className="w-4 h-4 text-indigo-600 group-hover:translate-x-1 transition" />
           </h3>
           <p className="text-xs text-slate-600 mt-1">
-            Define questions, max marks, model answers, and key concept keywords for AI semantic matching.
+            Define questions, max marks, model answers, and key concept keywords for semantic matching.
           </p>
         </div>
 
@@ -119,7 +119,7 @@ export const FacultyDashboard: React.FC<Props> = ({ exams = [], submissions = []
             <ArrowRight className="w-4 h-4 text-indigo-600 group-hover:translate-x-1 transition" />
           </h3>
           <p className="text-xs text-slate-600 mt-1">
-            Batch upload student answer sheets (Image/PDF). Extract handwritten text using Gemini Vision.
+            Batch upload student answer sheets (Image/PDF). Extract handwritten text using Vision OCR.
           </p>
         </div>
 

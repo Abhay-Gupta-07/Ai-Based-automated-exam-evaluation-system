@@ -31,14 +31,14 @@ export const Sidebar: React.FC<Props> = ({ role, activeTab, onTabChange }) => {
     { id: 'admin_courses', label: 'Courses & Subjects', icon: BookOpenCheck },
     { id: 'admin_users', label: 'Faculty & Students', icon: Users },
     { id: 'admin_logs', label: 'Audit Logs', icon: History },
-    { id: 'admin_settings', label: 'AI & System Settings', icon: Sliders },
+    { id: 'admin_settings', label: 'System Settings', icon: Sliders },
   ];
 
   const facultyMenuItems = [
     { id: 'fac_dash', label: 'Faculty Workspace', icon: LayoutDashboard },
     { id: 'fac_exams', label: 'Exam & Answer Keys', icon: FileCheck2 },
     { id: 'fac_upload', label: 'Upload & OCR Papers', icon: UploadCloud },
-    { id: 'fac_review', label: 'AI Review & Override', icon: Award },
+    { id: 'fac_review', label: 'Review & Grade Override', icon: Award },
     { id: 'fac_analytics', label: 'Class Performance', icon: BarChart3 },
     { id: 'fac_users', label: 'Student Directory', icon: Users },
   ];
@@ -46,7 +46,7 @@ export const Sidebar: React.FC<Props> = ({ role, activeTab, onTabChange }) => {
   const studentMenuItems = [
     { id: 'stu_dash', label: 'Student Dashboard', icon: GraduationCap },
     { id: 'stu_exams', label: 'Available Exams', icon: FileCheck2 },
-    { id: 'stu_reports', label: 'My AI Scorecards', icon: Award },
+    { id: 'stu_reports', label: 'My Exam Scorecards', icon: Award },
     { id: 'stu_history', label: 'Performance Trends', icon: BarChart3 },
   ];
 
@@ -60,7 +60,7 @@ export const Sidebar: React.FC<Props> = ({ role, activeTab, onTabChange }) => {
           <ExamBrainLogo size={34} className="drop-shadow-xs" />
           <div>
             <span className="text-xs font-bold text-slate-900 block tracking-tight">{role} Navigation</span>
-            <span className="text-[10px] text-slate-500 block">AI Evaluation Active</span>
+            <span className="text-[10px] text-slate-500 block">Evaluation System Active</span>
           </div>
         </div>
 
@@ -93,7 +93,7 @@ export const Sidebar: React.FC<Props> = ({ role, activeTab, onTabChange }) => {
       {/* Footer Info Box */}
       <div className="p-4 rounded-xl bg-white/70 text-slate-800 space-y-2 border border-white/90 shadow-2xs">
         <div className="flex items-center justify-between">
-          <span className="text-[11px] font-bold text-indigo-700">Gemini 3.6 Flash</span>
+          <span className="text-[11px] font-bold text-indigo-700">Evaluation Engine v2.4</span>
           <span className="text-[9px] bg-indigo-100/80 text-indigo-700 px-2 py-0.5 rounded-full font-mono font-bold">ONLINE</span>
         </div>
         <p className="text-[11px] text-slate-500 leading-tight">

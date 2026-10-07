@@ -126,7 +126,7 @@ export const SystemSettings: React.FC<Props> = ({ settings, onSave }) => {
         <div>
           <h2 className="text-xl font-bold text-slate-900">Admin System Settings & Credentials</h2>
           <p className="text-xs text-slate-500">
-            Configure Gemini AI evaluation weightages or update Administrator security login credentials
+            Configure evaluation weightages or update Administrator security login credentials
           </p>
         </div>
 
@@ -141,7 +141,7 @@ export const SystemSettings: React.FC<Props> = ({ settings, onSave }) => {
             }`}
           >
             <Cpu className="w-4 h-4" />
-            <span>AI & Pipeline Config</span>
+            <span>Evaluation & Pipeline Config</span>
           </button>
 
           <button
@@ -159,7 +159,7 @@ export const SystemSettings: React.FC<Props> = ({ settings, onSave }) => {
         </div>
       </div>
 
-      {/* TAB 1: AI & PIPELINE CONFIGURATION */}
+      {/* TAB 1: PIPELINE CONFIGURATION */}
       {activeTab === 'pipeline' && (
         <form onSubmit={handlePipelineSubmit} className="space-y-6">
           <div className="flex justify-between items-center liquid-glass p-4 rounded-xl">
@@ -169,7 +169,7 @@ export const SystemSettings: React.FC<Props> = ({ settings, onSave }) => {
               className="flex items-center space-x-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition shadow-md shadow-blue-500/20"
             >
               <Save className="w-4 h-4" />
-              <span>Save AI Settings</span>
+              <span>Save Settings</span>
             </button>
           </div>
 
@@ -185,19 +185,19 @@ export const SystemSettings: React.FC<Props> = ({ settings, onSave }) => {
             <div className="liquid-glass rounded-2xl p-5 space-y-4">
               <div className="flex items-center space-x-2 border-b border-slate-200 pb-3">
                 <Cpu className="w-5 h-5 text-blue-600" />
-                <h3 className="font-bold text-slate-900 text-base">Gemini AI Model & Confidence</h3>
+                <h3 className="font-bold text-slate-900 text-base">Evaluation Engine & Confidence</h3>
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1">Active Gemini Model</label>
+                <label className="block text-xs font-bold text-slate-700 mb-1">Active Evaluation Model</label>
                 <select
                   value={model}
                   onChange={(e) => setModel(e.target.value)}
                   className="w-full px-3 py-2 rounded-xl border border-slate-200 bg-white/80 text-xs font-semibold text-slate-800 focus:outline-none"
                 >
-                  <option value="gemini-3.6-flash">gemini-3.6-flash (Recommended Default)</option>
-                  <option value="gemini-3.1-pro-preview">gemini-3.1-pro-preview (Advanced STEM Reasoning)</option>
-                  <option value="gemini-3.1-flash-lite">gemini-3.1-flash-lite (Ultra Fast)</option>
+                  <option value="gemini-3.6-flash">Standard Evaluation Engine v2.4 (Recommended Default)</option>
+                  <option value="gemini-3.1-pro-preview">High-Precision Reasoning Engine</option>
+                  <option value="gemini-3.1-flash-lite">Ultra Fast Evaluation Engine</option>
                 </select>
               </div>
 
@@ -316,7 +316,7 @@ export const SystemSettings: React.FC<Props> = ({ settings, onSave }) => {
                   className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
                 />
                 <div>
-                  <span className="text-xs font-bold text-slate-800 block">Gemini Vision OCR</span>
+                  <span className="text-xs font-bold text-slate-800 block">Vision OCR Engine</span>
                   <span className="text-[10px] text-slate-500">Transcribe handwritten images</span>
                 </div>
               </label>

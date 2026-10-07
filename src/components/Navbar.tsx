@@ -21,9 +21,9 @@ export const Navbar: React.FC<Props> = ({
   const [showNotifications, setShowNotifications] = useState(false);
 
   const notifications = [
-    { id: '1', title: 'AI Evaluation Completed', desc: 'Exam EXAM-NLP-2025-A evaluated 3 papers with 96% avg confidence.', time: '2m ago' },
+    { id: '1', title: 'Evaluation Completed', desc: 'Exam EXAM-NLP-2025-A evaluated 3 papers with 96% avg confidence.', time: '2m ago' },
     { id: '2', title: 'Plagiarism Flag Alert', desc: 'Paper CS2023-018 showed 2% minor peer match.', time: '1h ago' },
-    { id: '3', title: 'System Setting Updated', desc: 'Dr. Sarah Jenkins updated AI confidence threshold to 85%.', time: '3h ago' },
+    { id: '3', title: 'System Setting Updated', desc: 'Dr. Sarah Jenkins updated confidence threshold to 85%.', time: '3h ago' },
   ];
 
   const roleBadges: Record<UserRole, { label: string; icon: any; color: string }> = {
@@ -37,7 +37,7 @@ export const Navbar: React.FC<Props> = ({
 
   return (
     <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-slate-200 shadow-xs transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 min-h-[64px] flex items-center justify-between">
         {/* Brand & Portal Badge */}
         <div className="flex items-center space-x-3">
           <AppLogo size="sm" theme="light" />

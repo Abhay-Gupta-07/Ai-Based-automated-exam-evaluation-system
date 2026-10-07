@@ -68,7 +68,7 @@ export const DocumentationModal: React.FC<Props> = ({ isOpen, onClose }) => {
             <div className="space-y-4">
               <h3 className="text-xl font-bold text-slate-900 border-b pb-2">Project Overview & Objectives</h3>
               <p>
-                The <strong>AI-Based Automated Exam Evaluation System</strong> is an enterprise-grade academic platform built to eliminate manual grading fatigue, standardized evaluation bias, and human error in university exams. Powered by <strong>Gemini 3.6 Flash AI</strong>, multi-modal OCR, and semantic keyphrase extraction, it processes student handwritten or digital submissions in seconds.
+                The <strong>Automated Exam Evaluation System</strong> is an enterprise-grade academic platform built to eliminate manual grading fatigue, standardized evaluation bias, and human error in university exams. Powered by multi-modal OCR and semantic keyphrase extraction, it processes student handwritten or digital submissions in seconds.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
@@ -77,7 +77,7 @@ export const DocumentationModal: React.FC<Props> = ({ isOpen, onClose }) => {
                   <p className="text-xs text-blue-800">Automates grading for thousands of papers with automated OCR and model answer matching.</p>
                 </div>
                 <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl">
-                  <h4 className="font-bold text-emerald-900 mb-1">⚡ Instant AI Feedback</h4>
+                  <h4 className="font-bold text-emerald-900 mb-1">⚡ Instant Feedback</h4>
                   <p className="text-xs text-emerald-800">Students receive immediate granular score breakdowns, strengths, missing concepts, and study links.</p>
                 </div>
                 <div className="p-4 bg-purple-50 border border-purple-200 rounded-xl">
@@ -90,8 +90,8 @@ export const DocumentationModal: React.FC<Props> = ({ isOpen, onClose }) => {
               <ul className="list-disc pl-5 space-y-1">
                 <li><strong>Frontend:</strong> React 19, Tailwind CSS v4, Framer Motion, Recharts, Lucide Icons</li>
                 <li><strong>Backend:</strong> Node.js + Express, TypeScript, Vite Middleware</li>
-                <li><strong>AI Engine:</strong> @google/genai (Gemini 3.6 Flash Multi-modal Vision & Reasoning)</li>
-                <li><strong>OCR Pipeline:</strong> Gemini Vision OCR + Regex Noise Cleaning Engine</li>
+                <li><strong>Evaluation Engine:</strong> Semantic Matching, Keyphrase Extraction & Rubric Reasoning Engine</li>
+                <li><strong>OCR Pipeline:</strong> Vision OCR + Regex Noise Cleaning Engine</li>
                 <li><strong>Security & RBAC:</strong> JWT Token Authentication, Audit Logging, Role Guards</li>
               </ul>
             </div>
@@ -101,7 +101,7 @@ export const DocumentationModal: React.FC<Props> = ({ isOpen, onClose }) => {
             <div className="space-y-4">
               <h3 className="text-xl font-bold text-slate-900 border-b pb-2">System Architecture</h3>
               <p>
-                The application strictly isolates client browser execution from sensitive Gemini AI API credentials using a full-stack Node.js/Express server proxy pattern.
+                The application strictly isolates client browser execution from sensitive backend API credentials using a full-stack Node.js/Express server proxy pattern.
               </p>
 
               <div className="bg-slate-900 text-slate-100 p-6 rounded-xl font-mono text-xs overflow-x-auto shadow-inner leading-normal border border-slate-800">
@@ -119,19 +119,19 @@ export const DocumentationModal: React.FC<Props> = ({ isOpen, onClose }) => {
  └──────────────┬──────────────────────────────┬────────────────┘
                 │                              │
                 ▼                              ▼
-  ┌───────────────────────────┐  ┌───────────────────────────┐
-  │  GEMINI 3.6 FLASH AI API  │  │   LOCAL / CLOUD STORAGE   │
-  │  - Vision OCR Extraction  │  │ - Users & Roles           │
-  │  - Semantic Embedding Match│  │ - Exams & Answer Keys     │
-  │  - Concept Gap Detection  │  │ - Submissions & Evaluatns │
-  │  - Plagiarism Analyzer    │  │ - Audit Logs              │
-  └───────────────────────────┘  └───────────────────────────┘
+   ┌───────────────────────────┐  ┌───────────────────────────┐
+   │ EVALUATION ENGINE SERVICE │  │   LOCAL / CLOUD STORAGE   │
+   │  - Vision OCR Extraction  │  │ - Users & Roles           │
+   │  - Semantic Embedding Match│  │ - Exams & Answer Keys     │
+   │  - Concept Gap Detection  │  │ - Submissions & Evaluatns │
+   │  - Plagiarism Analyzer    │  │ - Audit Logs              │
+   └───────────────────────────┘  └───────────────────────────┘
                 `}</pre>
               </div>
 
               <h4 className="font-bold text-slate-900 text-base mt-4">Core Principles</h4>
               <ol className="list-decimal pl-5 space-y-2">
-                <li><strong>Zero API Key Exposure:</strong> All Gemini calls execute strictly inside <code className="bg-slate-100 px-1 py-0.5 rounded text-blue-600 font-mono">server.ts</code> using <code className="bg-slate-100 px-1 py-0.5 rounded text-blue-600 font-mono">process.env.GEMINI_API_KEY</code>.</li>
+                <li><strong>Zero Credential Exposure:</strong> All execution tasks run strictly inside <code className="bg-slate-100 px-1 py-0.5 rounded text-blue-600 font-mono">server.ts</code> securely on the backend server.</li>
                 <li><strong>High Availability Fallback:</strong> If network timeouts occur, the evaluation engine gracefully defaults to local heuristic vector token matching so grading never freezes.</li>
               </ol>
             </div>
@@ -149,7 +149,7 @@ export const DocumentationModal: React.FC<Props> = ({ isOpen, onClose }) => {
                 <div className="text-center text-slate-400 font-bold">↓</div>
                 <div className="flex items-center space-x-3 bg-white p-3 rounded-lg border shadow-2xs">
                   <span className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">2</span>
-                  <div><strong>OCR Extraction:</strong> Gemini Vision transcribes handwritten & printed text into raw transcript.</div>
+                  <div><strong>OCR Extraction:</strong> Vision OCR transcribes handwritten & printed text into raw transcript.</div>
                 </div>
                 <div className="text-center text-slate-400 font-bold">↓</div>
                 <div className="flex items-center space-x-3 bg-white p-3 rounded-lg border shadow-2xs">
@@ -258,8 +258,8 @@ export const DocumentationModal: React.FC<Props> = ({ isOpen, onClose }) => {
                   <tr><td className="p-2 border text-green-700 font-bold">POST</td><td className="p-2 border">/api/auth/login</td><td className="p-2 border font-sans">Authenticate user & issue JWT token</td></tr>
                   <tr><td className="p-2 border text-blue-700 font-bold">GET</td><td className="p-2 border">/api/exams</td><td className="p-2 border font-sans">Fetch list of available exams</td></tr>
                   <tr><td className="p-2 border text-green-700 font-bold">POST</td><td className="p-2 border">/api/exams</td><td className="p-2 border font-sans">Create exam with question rubrics</td></tr>
-                  <tr><td className="p-2 border text-green-700 font-bold">POST</td><td className="p-2 border">/api/ocr/extract</td><td className="p-2 border font-sans">Extract handwritten text from image using Gemini Vision</td></tr>
-                  <tr><td className="p-2 border text-green-700 font-bold">POST</td><td className="p-2 border">/api/evaluation/evaluate</td><td className="p-2 border font-sans">Execute 8-step AI evaluation pipeline on submission</td></tr>
+                  <tr><td className="p-2 border text-green-700 font-bold">POST</td><td className="p-2 border">/api/ocr/extract</td><td className="p-2 border font-sans">Extract handwritten text from image using Vision OCR</td></tr>
+                  <tr><td className="p-2 border text-green-700 font-bold">POST</td><td className="p-2 border">/api/evaluation/evaluate</td><td className="p-2 border font-sans">Execute 8-step evaluation pipeline on submission</td></tr>
                   <tr><td className="p-2 border text-amber-700 font-bold">POST</td><td className="p-2 border">/api/evaluation/override</td><td className="p-2 border font-sans">Faculty manual score override & notes</td></tr>
                   <tr><td className="p-2 border text-blue-700 font-bold">GET</td><td className="p-2 border">/api/analytics/summary</td><td className="p-2 border font-sans">Get global university evaluation analytics</td></tr>
                 </tbody>
@@ -284,10 +284,10 @@ export const DocumentationModal: React.FC<Props> = ({ isOpen, onClose }) => {
                     <strong>Admin Role:</strong> Configure system thresholds, manage departments & faculty, inspect audit logs.
                   </div>
                   <div className="p-3 bg-slate-50 border rounded-lg">
-                    <strong>Faculty Role:</strong> Create question papers with model answers, upload student answer sheets, run AI evaluation, review and override marks.
+                    <strong>Faculty Role:</strong> Create question papers with model answers, upload student answer sheets, run automated evaluation, review and override marks.
                   </div>
                   <div className="p-3 bg-slate-50 border rounded-lg">
-                    <strong>Student Role:</strong> View upcoming exams, submit answer papers, inspect detailed AI scorecard, view strengths & study topics.
+                    <strong>Student Role:</strong> View upcoming exams, submit answer papers, inspect detailed scorecard, view strengths & study topics.
                   </div>
                 </div>
               </div>
@@ -297,7 +297,7 @@ export const DocumentationModal: React.FC<Props> = ({ isOpen, onClose }) => {
 
         {/* Footer */}
         <div className="bg-slate-100 px-6 py-4 flex justify-between items-center border-t border-slate-200">
-          <span className="text-xs text-slate-500">Version 2.4.0 • Gemini 3.6 Flash Multi-Modal Engine</span>
+          <span className="text-xs text-slate-500">Version 2.4.0 • Multi-Modal Evaluation Engine</span>
           <button
             onClick={onClose}
             className="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition"

@@ -88,7 +88,7 @@ export const AdminDashboard: React.FC<Props> = ({ analytics, auditLogs, onNaviga
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
         <div className="md:col-span-8 bg-indigo-600/90 backdrop-blur-md rounded-2xl p-5 text-white shadow-md shadow-indigo-500/10 border border-indigo-400/30 flex flex-col justify-between">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold opacity-90 uppercase tracking-wider">AI Evaluation Model Engine</span>
+            <span className="text-xs font-bold opacity-90 uppercase tracking-wider">Automated Evaluation Engine</span>
             <span className="px-2.5 py-1 bg-white/20 text-white text-[10px] font-extrabold rounded-full backdrop-blur-sm border border-white/20">
               98.4% Avg Accuracy
             </span>
@@ -97,7 +97,7 @@ export const AdminDashboard: React.FC<Props> = ({ analytics, auditLogs, onNaviga
             <div>
               <div className="flex items-center gap-2">
                 <div className="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse"></div>
-                <h3 className="text-xl font-bold">Gemini 3.6 Flash Active</h3>
+                <h3 className="text-xl font-bold">Evaluation Engine Active</h3>
               </div>
               <p className="text-xs text-indigo-100 mt-1">
                 Multi-modal OCR vision extraction & rubric-guided semantic evaluation active across all departments.

@@ -748,7 +748,7 @@ app.post('/api/ocr/extract', async (req, res) => {
         success: true,
         ocrText: extractedText,
         confidence: 94,
-        engine: 'Gemini 3.6 Flash Multi-Modal Vision OCR',
+        engine: 'Multi-Modal Vision OCR Engine',
       });
     } catch (err: any) {
       console.error('OCR Error:', err);

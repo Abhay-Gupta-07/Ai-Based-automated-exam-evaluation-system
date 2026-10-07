@@ -151,7 +151,7 @@ export const ExamManager: React.FC<Props> = ({ exams = [], subjects = [], onCrea
             <div className="bg-slate-900 text-white p-5 flex justify-between items-center">
               <div>
                 <h3 className="text-base font-bold">Create Exam & Model Answer Rubric</h3>
-                <p className="text-xs text-slate-300">Define expected model responses & key concepts for Gemini AI evaluation</p>
+                <p className="text-xs text-slate-300">Define expected model responses & key concepts for rubric evaluation</p>
               </div>
               <button onClick={() => setShowCreateModal(false)} className="text-slate-300 hover:text-white transition">
                 <X className="w-5 h-5" />
